@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
   <title>The Institute - Checkout</title>
-  <style>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487">
+  <style type="text/css">
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f4f7;
@@ -73,6 +75,14 @@
     .btn-primary:hover {
       background-color: #005a9e;
     }
+    .total {
+      margin-top: 20px;
+      padding: 10px;
+      border-top: 2px solid #333333;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -80,15 +90,28 @@
     <div class="checkout-header">
       <h1>The Institute - Checkout</h1>
     </div>
+    
+    <!-- Reservation Fee -->
     <div class="checkout-item">
       <p>Reservation Fee</p>
       <p class="price">$1.00</p>
     </div>
+    
+    <!-- Monthly Fee -->
     <div class="checkout-item">
       <p>The Monthly (Won't be charged until September 22)</p>
       <p class="price">$50.00</p>
     </div>
+
+    <!-- Total to Pay Today -->
+    <div class="total">
+      Total to Pay Today: $1.00
+    </div>
+
+    <!-- PayPal Subscription Button -->
     <div id="paypal-button-container-P-1GW168099B460791MM3M3PFA" class="paypal-button-container"></div>
+
+    <!-- Return and Refund Policy -->
     <div class="refund-policy">
       <p><strong>Return & Refund Policy</strong></p>
       <p>No refunds will be issued for any payments made.</p>
@@ -98,6 +121,8 @@
       <p>If you encounter any issues, please contact our support team before the end of your billing cycle.</p>
     </div>
   </div>
+
+  <!-- PayPal Subscription Button Script -->
   <script src="https://www.paypal.com/sdk/js?client-id=AWa0c331V4apv8MZSSEN64hvI-QV7EVCpd7yLyqFAF-IbWDP6s9NSYjjebgit7vPqX5gGm3H-ytr4JoX&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
   <script>
     paypal.Buttons({
