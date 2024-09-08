@@ -109,7 +109,7 @@
     </div>
 
     <!-- PayPal Subscription Button -->
-    <div id="paypal-button-container-P-0EV775438X185312EM3OJKIQ" class="paypal-button-container"></div>
+    <div id="paypal-button-container-P-8KH011965M956440FM3O6W4A" class="paypal-button-container"></div>
 
     <!-- Return and Refund Policy -->
     <div class="refund-policy">
@@ -118,30 +118,30 @@
       <p>If you wish to cancel your subscription, you must do so before the end of the trial period to avoid charges. Any cancellations made after the trial will not be eligible for a refund, and you will retain access until the end of the current billing cycle.</p>
       <p>We do not offer partial refunds for unused portions of a billing cycle or partial months.</p>
       <p>By subscribing, you agree to our terms and conditions, and you are responsible for managing your own subscription status.</p>
-      <p>If you encounter any issues, please contact our support team before the end of your billing cycle.</p>
+      <p>If you encounter any issues, please contact PayPal.</p>
     </div>
   </div>
 
   <!-- PayPal Subscription Button Script -->
-<script src="https://www.paypal.com/sdk/js?client-id=AWa0c331V4apv8MZSSEN64hvI-QV7EVCpd7yLyqFAF-IbWDP6s9NSYjjebgit7vPqX5gGm3H-ytr4JoX&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script src=“https://www.paypal.com/sdk/js?client-id=AWa0c331V4apv8MZSSEN64hvI-QV7EVCpd7yLyqFAF-IbWDP6s9NSYjjebgit7vPqX5gGm3H-ytr4JoX&vault=true&intent=subscription” data-sdk-integration-source=“button-factory”></script>
 <script>
   paypal.Buttons({
       style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
+          shape: ‘rect’,
+          color: ‘gold’,
+          layout: ‘vertical’,
+          label: ‘subscribe’
       },
       createSubscription: function(data, actions) {
         return actions.subscription.create({
           /* Creates the subscription */
-          plan_id: 'P-0EV775438X185312EM3OJKIQ'
+          plan_id: ‘P-8KH011965M956440FM3O6W4A’
         });
       },
       onApprove: function(data, actions) {
         alert(data.subscriptionID); // You can add optional success message for the subscriber here
       }
-  }).render('#paypal-button-container-P-0EV775438X185312EM3OJKIQ'); // Renders the PayPal button
+  }).render(‘#paypal-button-container-P-8KH011965M956440FM3O6W4A’); // Renders the PayPal button
 </script>
 </body>
 </html>
