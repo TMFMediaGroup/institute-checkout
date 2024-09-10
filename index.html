@@ -109,7 +109,7 @@
     </div>
 
 <!--     <!-- PayPal Subscription Button -->
-    <div id="paypal-button-container-P-0XK12086NV969324PM3PQBXA" class="paypal-button-container"></div> 
+    <div id="paypal-button-container-P-8XH399861M4935103M3QESRI" class="paypal-button-container"></div> 
 
     <!-- Return and Refund Policy -->
     <div class="refund-policy">
@@ -123,7 +123,7 @@
   </div>
 
   <!-- PayPal Subscription Button Script -->
-<div id="paypal-button-container-P-0XK12086NV969324PM3PQBXA"></div>
+<div id="paypal-button-container-P-8XH399861M4935103M3QESRI"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=AWa0c331V4apv8MZSSEN64hvI-QV7EVCpd7yLyqFAF-IbWDP6s9NSYjjebgit7vPqX5gGm3H-ytr4JoX&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
@@ -136,13 +136,13 @@
       createSubscription: function(data, actions) {
         return actions.subscription.create({
           /* Creates the subscription */
-          plan_id: 'P-0XK12086NV969324PM3PQBXA'
+          plan_id: 'P-8XH399861M4935103M3QESRI'
         });
       },
       onApprove: function(data, actions) {
         alert(data.subscriptionID); // You can add optional success message for the subscriber here
       }
-  }).render('#paypal-button-container-P-0XK12086NV969324PM3PQBXA'); // Renders the PayPal button
+  }).render('#paypal-button-container-P-8XH399861M4935103M3QESRI'); // Renders the PayPal button
 </script>
 </body>
 </html>
