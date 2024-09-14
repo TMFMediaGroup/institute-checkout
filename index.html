@@ -50,6 +50,10 @@
       margin-top: 20px;
       text-align: center;
     }
+    .crypto-button-container {
+      margin-top: 20px;
+      text-align: center;
+    }
     .refund-policy {
       font-size: 12px;
       color: #666666;
@@ -74,6 +78,22 @@
     }
     .btn-primary:hover {
       background-color: #005a9e;
+    }
+    .btn-crypto {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #f7931a; /* Bitcoin orange color */
+      color: white;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .btn-crypto:hover {
+      background-color: #e67e22; /* Slightly darker orange for hover */
     }
     .total {
       margin-top: 20px;
@@ -105,11 +125,16 @@
 
     <!-- Total to Pay Today -->
     <div class="total">
-      Total to Pay Today: $1.00
+      Total to Pay Today: $1.00 ($50 if you subscribe with crypto)
     </div>
 
-<!--     <!-- PayPal Subscription Button -->
+    <!-- PayPal Subscription Button -->
     <div id="paypal-button-container-P-3EJ9699302425774VM3S2GRA" class="paypal-button-container"></div> 
+
+    <!-- Crypto Payment Button -->
+    <div class="crypto-button-container">
+      <a href="https://pay.boomfi.xyz/2m4Lm9JVETcn2qeMVi8PeYn40Vj" class="btn-crypto">Subscribe with Crypto</a>
+    </div>
 
     <!-- Return and Refund Policy -->
     <div class="refund-policy">
@@ -123,6 +148,30 @@
   </div>
 
   <!-- PayPal Subscription Button Script -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AWa0c331V4apv8MZSSEN64hvI-QV7EVCpd7yLyqFAF-IbWDP6s9NSYjjebgit7vPqX5gGm3H-ytr4JoX&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+  <script>
+    paypal.Buttons({
+        style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'subscribe'
+        },
+        createSubscription: function(data, actions) {
+          return actions.subscription.create({
+            /* Creates the subscription */
+            plan_id: 'P-3EJ9699302425774VM3S2GRA'
+          });
+        },
+        onApprove: function(data, actions) {
+          alert(data.subscriptionID); // You can add optional success message for the subscriber here
+        }
+    }).render('#paypal-button-container-P-3EJ9699302425774VM3S2GRA'); // Renders the PayPal button
+  </script>
+</body>
+</html>
+
+
 <div id="paypal-button-container-P-3EJ9699302425774VM3S2GRA"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=AWa0c331V4apv8MZSSEN64hvI-QV7EVCpd7yLyqFAF-IbWDP6s9NSYjjebgit7vPqX5gGm3H-ytr4JoX&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
@@ -144,5 +193,3 @@
       }
   }).render('#paypal-button-container-P-3EJ9699302425774VM3S2GRA'); // Renders the PayPal button
 </script>
-</body>
-</html>
